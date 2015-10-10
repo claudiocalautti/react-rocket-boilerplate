@@ -1,6 +1,11 @@
-@import 'vars';
-@import 'typography';
-@import 'base';
+@import 'modules/mixins/all';
+@import 'modules/functions';
+@import 'modules/variables';
+@import 'modules/normalize';
+
+@import 'partials/typography';
+@import 'partials/base';
+@import 'partials/layout';
 
 @import 'components/header';
 @import 'components/footer';

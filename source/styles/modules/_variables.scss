@@ -1,0 +1,24 @@
+// colors
+$white: #fff;
+$black: #000;
+
+
+// spacing
+$full-space: 40px;
+$half-space: 20px;
+
+
+// fonts
+$base-font: 'Base Font Name';
+$heading-font: 'Heading Font Name';
+
+$font-size--xs: 10px;
+$font-size--sm: 12px;
+$font-size--md: 16px;
+$font-size--lg: 24px;
+$font-size--xl: 32px;
+
+$text-color: lighten($black, (100% - 87%));
+$text-secondary-color: lighten($black, (100% - 54%));
+$text-hint-color: lighten($black, (100% - 26%));
+$divider-color: lighten($black, (100% - 12%));

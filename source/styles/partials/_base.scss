@@ -1,0 +1,18 @@
+@include manage-user-select;
+@include selection($white, $black);
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @include base-font-style;
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+#app {
+  // display: none;
+}
