@@ -1,0 +1,27 @@
+{
+  "folders":
+  [
+    {
+      "file_exclude_patterns":
+      [
+        ".*",
+        "__*",
+        "*.html",
+        "*.txt",
+        "*.xml",
+        "*.md"
+      ],
+      "folder_exclude_patterns":
+      [
+        "node_modules",
+        "public",
+        "source"
+      ],
+      "path": "."
+    },
+    {
+      "name": "source",
+      "path": "source/"
+    }
+  ]
+}
