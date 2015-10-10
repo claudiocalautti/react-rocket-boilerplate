@@ -1,26 +1,35 @@
 'use strict';
 
+var PATHS = {
+  src: './source',
+  dest: './public'
+};
+
 module.exports = {
 
-  'serverport': 3000,
+  // True to use Browser Sync as server.
+  // False to use your own server.
+  devModeStatic: false,
 
-  'scripts': {
-    'src': './app/js/**/*.js',
-    'dest': './build/js/'
+  serverPort: 3000,
+
+  scripts: {
+    src: PATHS.src + '/scripts/**/*.js',
+    dest: PATHS.dest + '/js/'
   },
 
-  'images': {
-    'src': './app/images/**/*.{jpeg,jpg,png}',
-    'dest': './build/images/'
+  images: {
+    src: PATHS.src + '/images/**/*.{jpeg,jpg,png}',
+    dest: PATHS.dest + '/images/'
   },
 
-  'styles': {
-    'src': './app/styles/**/*.scss',
-    'dest': './build/css/'
+  styles: {
+    src: PATHS.src + '/styles/**/*.scss',
+    dest: PATHS.dest + '/css/'
   },
 
-  'sourceDir': './app/',
+  sourceDir: PATHS.src + '/',
 
-  'buildDir': './build/'
+  buildDir: PATHS.dest + '/'
 
 };

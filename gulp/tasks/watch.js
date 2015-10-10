@@ -3,7 +3,13 @@
 var gulp   = require('gulp');
 var config = require('../config');
 
-gulp.task('watch', ['browserSync', 'server'], function() {
+var tasks = ['browserSync'];
+
+if (config.devModeStatic === false) {
+  tasks.push('server');
+}
+
+gulp.task('watch', tasks, function() {
 
   // Scripts are automatically watched by Watchify inside Browserify task
   gulp.watch(config.styles.src,                 ['sass']);

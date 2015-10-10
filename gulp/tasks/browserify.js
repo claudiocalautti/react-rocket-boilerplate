@@ -12,7 +12,6 @@ var browserify   = require('browserify');
 var babelify     = require('babelify');
 var uglify       = require('gulp-uglify');
 var browserSync  = require('browser-sync');
-var debowerify   = require('debowerify');
 var handleErrors = require('../util/handle-errors');
 var config       = require('../config');
 
@@ -20,7 +19,7 @@ var config       = require('../config');
 function buildScript(file, watch) {
 
   var bundler = browserify({
-    entries: [config.sourceDir + 'js/' + file],
+    entries: [config.sourceDir + 'scripts/' + file],
     debug: !global.isProd,
     cache: {},
     packageCache: {},
@@ -33,7 +32,6 @@ function buildScript(file, watch) {
   }
 
   bundler.transform(babelify);
-  bundler.transform(debowerify);
 
   function rebundle() {
     var stream = bundler.bundle();
