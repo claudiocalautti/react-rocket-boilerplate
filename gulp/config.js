@@ -19,7 +19,7 @@ module.exports = {
   },
 
   images: {
-    src: PATHS.src + '/images/**/*.{jpeg,jpg,png}',
+    src: PATHS.src + '/images/**/*.{jpeg,jpg,png,svg}',
     dest: PATHS.dest + '/images/'
   },
 
