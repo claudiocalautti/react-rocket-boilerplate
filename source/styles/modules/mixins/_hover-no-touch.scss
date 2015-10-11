@@ -1,0 +1,7 @@
+@mixin hover-no-touch {
+  @at-root {
+    .no-touchevents &:hover {
+      @content;
+    }
+  }
+}
