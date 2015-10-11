@@ -1,24 +1,36 @@
-// colors
+// Colors
 $white: #fff;
 $black: #000;
 
 
-// spacing
+// Spacing
 $full-space: 40px;
-$half-space: 20px;
+$half-space: $full-space / 2;
 
 
-// fonts
-$base-font: 'Base Font Name';
-$heading-font: 'Heading Font Name';
+// Fonts
+$base-font: 'Arial';
+$heading-font: 'Helvetica';
 
-$font-size--xs: 10px;
-$font-size--sm: 12px;
-$font-size--md: 16px;
-$font-size--lg: 24px;
-$font-size--xl: 32px;
+$base-fz: 100%; // 16px
+$base-lh: 1.5; // 24px
+
+$fz--xs: rem(10px);
+$fz--sm: rem(12px);
+$fz--md: rem(16px);
+$fz--lg: rem(24px);
+$fz--xl: rem(32px);
+
+$lh--xs: lh(14px, $fz--xs);
+$lh--sm: lh(18px, $fz--sm);
+$lh--md: lh(24px, $fz--md);
+$lh--lg: lh(36px, $fz--lg);
+$lh--xl: lh(42px, $fz--xl);
 
 $text-color: lighten($black, (100% - 87%));
 $text-secondary-color: lighten($black, (100% - 54%));
 $text-hint-color: lighten($black, (100% - 26%));
 $divider-color: lighten($black, (100% - 12%));
+
+// Paths
+$img-basepath: '../img/'

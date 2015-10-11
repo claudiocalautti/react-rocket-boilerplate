@@ -1,7 +1,9 @@
 @include manage-user-select;
 @include selection($white, $black);
+@include natural-box-layout();
 
 html {
+  font-size: $base-fz;
 }
 
 body {
