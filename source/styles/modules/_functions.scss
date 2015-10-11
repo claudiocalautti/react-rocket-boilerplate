@@ -23,14 +23,26 @@
   @return img($img-name) no-repeat;
 }
 
-@function bg-center($img-name) {
-  @return img($img-name) no-repeat center center;
+@function bg-center($img-name: null) {
+  @if $img-name != null  {
+    @return img($img-name) no-repeat center center;
+  } @else {
+    @return no-repeat center center;
+  }
 }
 
-@function bg-cover($img-name) {
-  @return img($img-name) no-repeat center center / cover;
+@function bg-cover($img-name: null) {
+  @if $img-name != null  {
+    @return img($img-name) no-repeat center center / cover;
+  } @else {
+    @return no-repeat center center / cover;
+  }
 }
 
-@function bg-contain($img-name) {
-  @return img($img-name) no-repeat center center / contain;
+@function bg-contain($img-name: null) {
+  @if $img-name != null  {
+    @return img($img-name) no-repeat center center / contain;
+  } @else {
+    @return no-repeat center center / contain;
+  }
 }
