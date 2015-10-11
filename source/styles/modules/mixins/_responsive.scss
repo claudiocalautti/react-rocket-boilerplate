@@ -1,15 +1,27 @@
-// RESPONSIVE
-
+// Responsive mixin, create a media query with the style for a given
+// breakpoint, based on the selected approach, which can be set
+// with these shorthands '<' and '>'.
+//
+// USAGE:
+// .example {
+// 	width: 100%;
+//
+// 	@include responsive('>', 'tablets') {
+// 		width: 50%;
+// 	};
+// }
 
 // Settings
 $mobile-first: 'min-width';
 $desktop-first: 'max-width';
 
 $named-breakpoints: (
-	'iphone': em(320px),
-	'phones': em(480px),
+	'iphone5': em(320px),
+	'iphone6': em(375px),
+	'phones': em(736px), // Include iPhone 6 Plus at 736px.
 	'tablets': em(768px),
 	'desktops': em(992px),
+	'ipad-landscape': em(1024px),
 	'wide-screen': em(1200px)
 );
 
@@ -38,27 +50,11 @@ $named-breakpoints: (
 
 	// Print media query
 	@media only screen and (#{$approach}: #{$breakpoint}) {
-		@each $property, $value in $properties {
-			// @debug $property, $value;
-			#{$property}: #{$value};
-		}
+		@content;
 	}
 }
 
-
-// USAGE:
-
-// selector {
-// 	'property': 'value'
-
-// 	@include responsivee(' > for min-width, < for max-width ', 'named breakpoint or value in px', (
-// 		'property': 'value',
-// 		'property': 'value'
-// 	));
-// }
-
-
-// BOOTSTRAP MEDIA QUERIES VALUES
+// BOOTSTRAP BREAKPOINTS
 
 // ============  Mobile First Method  =============
 // min-width: 320px   Custom, iPhone Retina
