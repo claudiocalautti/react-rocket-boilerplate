@@ -42,25 +42,25 @@ a {
   margin-bottom: 0.618em;
 
   &.-large {
-    font-size: $font-size--lg;
+    font-size: $fz--lg;
     font-weight: bold;
     line-height: $half-space * 3 / 2;
   }
 
   &.-medium {
-    font-size: $font-size--md;
+    font-size: $fz--md;
     font-weight: normal;
     line-height: $half-space;
   }
 
   &.-small {
-    font-size: $font-size--sm;
+    font-size: $fz--sm;
     font-weight: bold;
     line-height: $half-space * 2 / 3;
   }
 
   &.-smallest {
-    font-size: $font-size--xs;
+    font-size: $fz--xs;
     font-weight: bold;
   }
 }
